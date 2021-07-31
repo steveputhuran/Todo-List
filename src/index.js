@@ -1,18 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-
-
-const DATA = [
-  { id: "todo-0", name: "Eat", completed: true },
-  { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false }
-];
+import ReactDOM from "react-dom";
+import App from "./App";
+import { SessionProvider } from "@inrupt/solid-ui-react";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App tasks={DATA} />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <SessionProvider>
+    <App />
+  </SessionProvider>,
+  document.getElementById("root")
 );
